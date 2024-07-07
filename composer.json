@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Frankie Jarrett",
-            "email": "frankie@example.com"
+            "email": "fjarrett@gmail.com"
         }
     ],
     "require": {
@@ -51,8 +51,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "test": "vendor/bin/pest --parallel",
+        "test": "XDEBUG_MODE=off vendor/bin/pest --parallel",
         "test:ci": "vendor/bin/pest",
-        "test:coverage": "vendor/bin/pest --coverage"
+        "test:coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage"
     }
 }

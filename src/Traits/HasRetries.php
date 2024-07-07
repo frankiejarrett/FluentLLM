@@ -4,6 +4,9 @@ namespace FluentLLM\Traits;
 
 use Illuminate\Support\Facades\RateLimiter;
 
+/**
+ * @property \FluentLLM\Support\RequestBuilder $requestBuilder
+ */
 trait HasRetries
 {
     protected int $maxAttempts;

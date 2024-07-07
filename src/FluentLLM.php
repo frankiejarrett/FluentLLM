@@ -96,6 +96,16 @@ class FluentLLM extends Manager
         }
     }
 
+    public function runIf($boolean): mixed
+    {
+        return value($boolean) ? $this->run() : null;
+    }
+
+    public function runUnless($boolean): mixed
+    {
+        return ! value($boolean) ? $this->run() : null;
+    }
+
     protected function sendRequest(): mixed
     {
         return $this->driver()->sendRequest(

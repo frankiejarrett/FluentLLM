@@ -12,8 +12,8 @@ class ProcessRequestTest extends TestCase
 {
     public function test_process_request_job_handles_correctly()
     {
-        $messages = new Collection([['role' => 'user', 'content' => 'Test message']]);
-        $options = new Collection(['model' => 'gpt-3.5-turbo']);
+        $messages = collect([['role' => 'user', 'content' => 'Test message']]);
+        $options = collect(['model' => 'gpt-3.5-turbo']);
 
         $mockDriver = Mockery::mock('FluentLLM\Contracts\Driver');
         $mockDriver->shouldReceive('sendRequest')

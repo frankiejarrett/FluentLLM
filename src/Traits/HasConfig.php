@@ -10,7 +10,7 @@ trait HasConfig
 
     protected function initializeConfig(): void
     {
-        $this->runtimeConfig = new Collection();
+        $this->runtimeConfig = collect();
     }
 
     public function getConfig(string $key = null, mixed $default = null): mixed

@@ -12,8 +12,8 @@ class RequestBuilder
 
     public function __construct()
     {
-        $this->messages = new Collection();
-        $this->options = new Collection();
+        $this->messages = collect();
+        $this->options = collect();
     }
 
     public function addMessage(string $role, string $content): self

@@ -21,8 +21,8 @@ class FakeFluentLLM extends FluentLLM
             $this->requestBuilder = new RequestBuilder();
         }
 
-        $this->expectedResponses = new Collection();
-        $this->recordedRequests = new Collection();
+        $this->expectedResponses = collect();
+        $this->recordedRequests = collect();
     }
 
     public function expectResponse(mixed $response): self
