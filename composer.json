@@ -51,7 +51,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage"
+        "test": "vendor/bin/pest --parallel",
+        "test:ci": "vendor/bin/pest",
+        "test:coverage": "vendor/bin/pest --coverage"
     }
 }
